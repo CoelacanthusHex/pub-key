@@ -1,0 +1,26 @@
+*.bash     text eol=lf
+*.fish     text eol=lf
+*.sh       text eol=lf
+*.zsh      text eol=lf
+# These are explicitly windows files and should use crlf
+*.bat      text eol=crlf
+*.cmd      text eol=crlf
+*.ps1      text eol=crlf
+
+*.bibtex   text diff=bibtex
+*.md       text diff=markdown
+*.mdx      text diff=markdown
+*.markdown text diff=markdown
+*.tex      text diff=tex
+
+# Perl
+*.pl       text diff=perl
+*.pm       text diff=perl
+
+# Hypertext Markup Language
+*.html     text diff=html
+*.xhtml    text diff=html
+
+# Cascading style sheet
+*.css      text diff=css
+*.scss     text diff=css

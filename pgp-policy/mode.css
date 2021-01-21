@@ -1,0 +1,36 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: white;
+    --fg-color: #333;
+    --link-color: grey;
+    --visited-color: black;
+    --li-color: #000;
+    --quote-color: #eee;
+    --quote-cite-color: #bfbfbf;
+    --quote-p-color: #666;
+    --hr-color: #999;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #121212;
+    --fg-color: hsl(0deg 0% 100% / 87%);
+    --link-color: silver;
+    --visited-color: hsl(0deg 0% 100% / 87%);
+    --li-color: #fff;
+    --quote-color: #333;
+    --quote-cite-color: #d0d0d0;
+    --quote-p-color: #ababab;
+    --hr-color: #777;
+  }
+}
+
+/* when print to PDF */
+@media print {
+  code {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow: normal;
+  }
+}

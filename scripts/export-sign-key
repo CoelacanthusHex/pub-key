@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+gpg --armor --export $1 | gpg --encrypt -r $1 --armor --output $1-SignedBy-15F4180E73787863.asc

@@ -1,0 +1,27 @@
+dir: ltr
+css:
+  - style.css
+  - mode.css
+colorlinks: true
+# method is plain, webtex, gladtex, mathml, mathjax, katex
+# you may specify a url with webtex, mathjax, katex
+html-math-method:
+  method: mathml
+tab-stop: 4
+preserve-tabs: true
+
+#documentclass: ctexart
+#classoption:
+#  - UTF8
+#  - "fontset=none"
+#pdf-engine: xelatex
+#pdf-engine-opts:
+#  - "-shell-escape"
+#header-includes:
+#  - |
+#    ```{=latex}
+#    \setCJKmainfont{Noto Serif CJK SC}
+#    \setCJKsansfont{Noto Sans CJK SC}
+#    \setCJKmonofont{Noto Sans CJK SC}
+#    ```
+#

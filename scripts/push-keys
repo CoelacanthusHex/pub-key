@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+gpg --keyserver hkps://keyserver.ubuntu.com --send-keys $@
+gpg --keyserver hkps://pgp.mit.edu --send-keys $@
+gpg --keyserver hkps://keys.gnupg.net --send-keys $@
+gpg --keyserver hkps://pgp.surfnet.nl --send-keys $@
+gpg --keyserver hkps://pgp.gnd.pw --send-keys $@
+
+for key in $@; do
+    gpg --export $key | curl -T - https://keys.openpgp.org
+done

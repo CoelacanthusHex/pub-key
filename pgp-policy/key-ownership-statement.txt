@@ -1,0 +1,32 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+# Key Ownership Statement
+
+Chinese:
+
+本人特此声明，位于 keyserver.ubuntu.com 和 pgp.mit.edu 上的 0xD2AC54B70C894FEC 和 0x5C0D4635C9293CBC 系他人造假，0x361F1EA9A50FFB2196ED3A1D9F3C15F495D27E89 系本人测试所用，因未知原因被上传，因发现过晚，无法吊销，特此声明其已作废。
+本声明将使用本人的密钥 0x15F4180E73787863 的子密钥 0xE35C89E45867AE35 签名。
+
+Celeste Liu
+2022年2月20日
+
+English:
+
+I hereby declare that 0xD2AC54B70C894FEC and 0x5C0D4635C9293CBC located on
+keyserver.ubuntu.com and pgp.mit.edu are faked by others.
+0x361F1EA9A50FFB2196ED3A1D9F3C15F495D27E89 is used by me for testing. It was
+uploaded for unknown reasons and was discovered too late. , cannot be revoked,
+and hereby declare that it has been invalidated .
+This statement will be signed using the 0xE35C89E45867AE35 subkey of my
+key 0x15F4180E73787863.
+
+Celeste Liu
+February 20, 2022
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQQWueXrpnXi8KYNNJjjXInkWGeuNQUCZWs0lwAKCRDjXInkWGeu
+NXYoAQDj7xiAFZbpwlE3N3Avob0PnfPjBpMSur+le5DEFv9pFwD/dsSqPsp/RZKR
+cvVlQFOWI/ni2L0hQ/PFl40Tp/sG+gM=
+=V3ca
+-----END PGP SIGNATURE-----
