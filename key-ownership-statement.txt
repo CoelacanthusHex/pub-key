@@ -1,0 +1,35 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+# Key Ownership Statement
+
+Chinese:
+
+本人特此声明，位于 keyserver.ubuntu.com 和 pgp.mit.edu 上的 [0xD2AC54B70C894FEC](https://pgp.mit.edu/pks/lookup?op=get&search=0xD2AC54B70C894FEC) 和[0x361F1EA9A50FFB2196ED3A1D9F3C15F495D27E89](https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x361f1ea9a50ffb2196ed3a1d9f3c15f495d27e89) 系本人测试所用，因未知原因被上传，因发现过晚，无法吊销，特此声明其已作废。
+本声明将使用本人的密钥 0x15F4180E73787863 的子密钥 0xE35C89E45867AE35 签名。
+
+Celeste Liu
+2022年2月20日
+
+English:
+
+I hereby declare that 
+[0xD2AC54B70C894FEC](https://pgp.mit.edu/pks/lookup?op=get&search=0xD2AC54B70C89
+4FEC) and 
+[0x361F1EA9A50FFB2196ED3A1D9F3C15F495D27E89](https://keyserver.ubuntu.com/pks/lo
+okup?op=get&search=0x361f1ea9a50ffb2196ed3a1d9f3c15f495d27e89) located on 
+keyserver.ubuntu.com and pgp.mit.edu are used by me for testing, and they were 
+uploaded for unknown reasons, and since they were found too late to be revoked, 
+I hereby declare that they have been invalidated.
+This statement will be signed with my key 0x15F4180E73787863 with subkey 
+0xE35C89E45867AE35.
+
+Celeste Liu
+February 20, 2022
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQQWueXrpnXi8KYNNJjjXInkWGeuNQUCYhcm9AAKCRDjXInkWGeu
+Nd6oAP0b2ElSntC7j3pIPKr+f19rbQKvAUJytc8GiVojX7hWFgEA5Niyo+Zy1xKo
+Cr8zjy+JO5xJRR0Q2k3uFMTPej0DnAQ=
+=BB9a
+-----END PGP SIGNATURE-----

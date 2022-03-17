@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>PGP Sign Policy</title>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="lang-fonts.css" />
+  <link rel="stylesheet" href="style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">PGP Sign Policy</h1>
+</header>
+<p>The following is the process I follow when signing other people’s keys.<br />
+(<a href="./pgp-policy.zh-CN.html">简体中文版本</a>) (<a href="./pgp-policy.zh-TW.html">正體中文版本</a>) (<a href="./policy.txt">Plain Text Version</a>)</p>
+<h2 id="summary">Summary</h2>
+<p>This policy applies to signatures made with the following keys.</p>
+<pre><code>sec   ed25519/0x15F4180E73787863 2021-07-14 [C] [expires: 2027-01-01]
+      Key fingerprint = 892E BC7D C392 DFF9 C9C0  3F1D 15F4 180E 7378 7863
+uid                   [ultimate] Coelacanthus &lt;coelacanthus@outlook.com&gt;
+uid                   [ultimate] Coelacanthus &lt;CoelacanthusHex@gmail.com&gt;
+uid                   [ultimate] Coelacanthus &lt;i@coelacanthus.moe&gt;
+uid                   [ultimate] Celeste Liu (For AOSC) &lt;coelacanthus@aosc.io&gt;
+ssb&gt;  ed25519/0xE35C89E45867AE35 2021-07-14 [S] [expires: 2027-01-01]
+      Key fingerprint = 16B9 E5EB A675 E2F0 A60D  3498 E35C 89E4 5867 AE35
+ssb&gt;  cv25519/0x7C20D9B5ED32703C 2021-07-14 [E] [expires: 2027-01-01]
+      Key fingerprint = C943 E5E3 7E4B AC37 AA1F  AE6E 7C20 D9B5 ED32 703C
+ssb&gt;  ed25519/0x06F96A0FB5AD258D 2021-07-14 [A] [expires: 2027-01-01]
+      Key fingerprint = 8977 A899 55F9 0095 55E9  D344 06F9 6A0F B5AD 258D</code></pre>
+<p>You can get my PGP key by doing one of the following.</p>
+<ul>
+<li><code>gpg --keyserver hkps://keys.gnupg.net --recv-keys 892EBC7DC392DFF9C9C03F1D15F4180E73787863</code></li>
+<li><code>gpg --fetch-keys 'https://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x892ebc7dc392dff9c9c03f1d15f4180e73787863'</code></li>
+<li><code>gpg --fetch-keys 'https://pgp.mit.edu/pks/lookup?op=get&amp;search=0x15F4180E73787863'</code></li>
+<li><code>gpg --fetch-keys 'https://pgp.surf.nl/pks/lookup?op=get&amp;search=0x15F4180E73787863'</code></li>
+<li><code>gpg --fetch-keys 'https://pgp.gnd.pw/pks/lookup?op=get&amp;search=0x892ebc7dc392dff9c9c03f1d15f4180e73787863'</code></li>
+<li><code>gpg --fetch-keys https://keybase.io/coelacanthus/key.asc</code></li>
+</ul>
+<p>or QR code</p>
+<p><a href="https://pgp.coelacanthus.moe/public-key.png"><img src="../public-key.png" /></a></p>
+<p><strong>Please note</strong></p>
+<ul>
+<li>Be sure to use the full key ID when importing keys with <code>--recv-keys</code>, there is information that key collisions are possible.</li>
+<li>Please use <code>hkps://keys.openpgp.org</code> as keyserver when importing keys with <code>--recv-keys</code>, using other keyservers may expose you to <a href="https://dkg.fifthhorseman.net/blog/openpgp-certificate-flooding.html">Certificate Flooding Attack</a>.</li>
+</ul>
+<p>Note that on the public key server group, there exist two public keys using the same UID as me, they are my former test public keys that were maliciously uploaded for unknown reasons, please refer to my <a href="https://pgp.coelacanthus.moe/key-ownership-statement.txt">key ownership statement</a>.</p>
+<p>This policy was originally written on 2021-08-16 and has been in effect since that date, but maybe superseded by newer versions at any time. The structure and content of this document are inspired by Allen Zhong’s <a href="https://atr.me/~pgp/policy-cn.html">PGP Key Signing Policy</a> and Outvi V’s <a href="https://blog.outv.im/p/gpg-policy/">GPG Signing Policy</a>.</p>
+<h2 id="signature-policy">Signature Policy</h2>
+<h3 id="signature-level">Signature level</h3>
+<p>According to the GPG manual and <a href="https://datatracker.ietf.org/doc/html/rfc4880">OpenPGP Message Format</a>, signatures are now classified into the following four levels: <code>Generic (0)</code>, <code>Persona (1)</code>, <code>Casual (2)</code>, <code>Positive (3)</code>.</p>
+<ul>
+<li>Level 0 (Pervasive Certification)</li>
+</ul>
+<blockquote>
+<p>Won’t sign to ensure a monotonic increment in the trust level.</p>
+</blockquote>
+<ul>
+<li>Level 1 (Persona Certification)</li>
+</ul>
+<blockquote>
+<p>I do not make any guarantee for it。</p>
+</blockquote>
+<ul>
+<li>Level 2 (Casual Certification)</li>
+</ul>
+<blockquote>
+<p>Sign only if I meet with them offline and verify their identity (or other means of authentication of the same level), I have verified the relevance of the key, the e-mail address used, and the social entity.</p>
+</blockquote>
+<ul>
+<li>Level 3 (Positive Certification)</li>
+</ul>
+<blockquote>
+<p>I believe that the private key controller of this GPG public key is trusted, has some understanding of the GPG, and can reasonably sign other people.</p>
+</blockquote>
+<p>Please note that because of the default configuration of GNUPG, Level 0 certification is considered a trusted signature, but Level 1 is not considered a trusted signature (i.e., it does not participate in the construction of the chain of trust). I have decided for this situation that <strong>Level 0 signatures will not be made</strong>.</p>
+<h3 id="signature-process">Signature Process</h3>
+<h4 id="level-1">Level 1</h4>
+<p>You need to send me an email requesting a Level 1 signature with the following content</p>
+<ul>
+<li>key fingerprint</li>
+<li>Which key server the key is uploaded to</li>
+<li>The UID you want me to sign, or leave this blank if you want me to sign all UIDs</li>
+<li>Some notes about the desired Level 1 signature</li>
+</ul>
+<p>The email should be signed with the key to be signed and encrypted with my public key.</p>
+<h4 id="level-2">Level 2</h4>
+<p>This happens when we meet offline.</p>
+<h3 id="principle-of-fairness">Principle of fairness</h3>
+<p>For signatures I request from others, I will sign their keys at the same level (according to their signature policy). I also want to get the same level of signature from the holder of the key I signed as the one I made.</p>
+<p>I want to cross-sign the key, so if the signed person does not want to sign my key, there is no point in making a signature request to me.</p>
+<h2 id="changelog">Changelog</h2>
+<ul>
+<li>2021-08-16: First draft</li>
+<li>2022-02-20: Add keyserver of MIT and Ubuntu</li>
+<li>2022-02-24: Add QR Code</li>
+<li>2022-02-24: Only sign Level 2 and 3</li>
+<li>2022-03-13: Correct spell error</li>
+<li>2022-03-13: Remove keys.openpgp.org as it does not preserve signatures</li>
+<li>2022-03-13: Fix Outvi V’s signature policy link</li>
+<li>2022-03-13: Fix signature levels which will be made</li>
+</ul>
+<h2 id="credit">Credit</h2>
+<p>Copyright (C) 2021-2022 Celeste Liu.</p>
+<p>Permission is granted to copy, distribute and/or modify this document under the terms of the <a href="https://www.gnu.org/licenses/fdl.html">GNU Free Documentation License</a>, Version 1.3 or any later version published by the Free Software Foundation.</p>
+<blockquote>
+<p>A signed version of this documentation is available at: https://pgp.coelacanthus.moe/policy-signed.txt</p>
+</blockquote>
+</body>
+</html>

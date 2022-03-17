@@ -1,0 +1,65 @@
+@import url("https://cdn.jsdelivr.net/npm/hanamin@latest/HanaMin.min.css");
+@import url("https://cdn.jsdelivr.net/gh/ayaka14732/syyon-vencie@6b08e67/charissil/CharisSIL.css");
+@import url("https://cdn.jsdelivr.net/gh/nushu-script/NotoTraditionalNushu@woff-v1.0/index.css");
+
+/* ZHS (1) */
+:lang(zh), :lang(cmn) {
+	font-family: "Noto Serif", "Noto Serif CJK SC", "Source Han Serif SC", serif, HanaMin, serif;
+	font-language-override: "ZHS";
+}
+/* ZHH (1) */
+:lang(yue), :lang(lzh), :lang(ltc), :lang(och) {
+	font-family: "Noto Serif", "Noto Serif CJK KR", "Source Han Serif K", serif, HanaMin, serif;
+	font-language-override: "KOR";
+}
+/* JAN (1) */
+:lang(ja) {
+	font-family: "Noto Serif", "Noto Serif CJK JP", "Source Han Serif", serif, HanaMin, serif;
+	font-language-override: "JAN";
+}
+/* KOR (1) */
+:lang(ko) {
+	font-family: "Noto Serif", "Noto Serif CJK KR", "Source Han Serif K", serif, HanaMin, serif;
+	font-language-override: "KOR";
+}
+/* ZHS (2) */
+:lang(yue-Hans) {
+	font-family: "Noto Serif", "Noto Serif CJK SC", "Source Han Serif SC", serif, HanaMin, serif;
+	font-language-override: "ZHS";
+}
+/* ZHH (2) */
+:lang(zh-HK), :lang(zh-TW), :lang(zh-Hant), :lang(cmn-Hant) {
+	font-family: "Noto Serif", "Noto Serif CJK KR", "Source Han Serif K", serif, HanaMin, serif;
+	font-language-override: "KOR";
+}
+
+:lang(zh-Nshu) {
+	font-family: serif, "Noto Traditional Nushu", serif;
+}
+
+:lang(en-fonipa),
+:lang(zh-Latn-fonipa),
+:lang(cmn-Latn-fonipa),
+:lang(ltc-Latn-fonipa),
+:lang(lzh-Latn-fonipa),
+:lang(och-Latn-fonipa),
+:lang(yue-Latn-fonipa) {
+	font-family: CharisSILW, sans-serif;
+}
+
+code:lang(zh), code:lang(cmn),
+code:lang(yue), code:lang(lzh), code:lang(ltc), code:lang(och),
+code:lang(ja),
+code:lang(ko),
+code:lang(yue-Hans),
+code:lang(zh-HK), code:lang(zh-TW), code:lang(zh-Hant), code:lang(cmn-Hant),
+code:lang(zh-Nshu),
+code:lang(en-fonipa),
+code:lang(zh-Latn-fonipa),
+code:lang(cmn-Latn-fonipa),
+code:lang(ltc-Latn-fonipa),
+code:lang(lzh-Latn-fonipa),
+code:lang(och-Latn-fonipa),
+code:lang(yue-Latn-fonipa){
+	font-family: monospace, "Noto Traditional Nushu", monospace;
+}
